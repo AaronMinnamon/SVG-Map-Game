@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="listContainer">
+         <ul class="countryList">
+          <li id="{{country.ID}}" ng-repeat="item in items" ng-if="$even"><span style='color:red;text-decoration:line-through'><span style="color:white">{{item.name}}</span></span></li>
+        </ul>
+        <ul class="countryList">
+          <li id="{{country.ID}}" ng-repeat="item in items" ng-if="$odd"><span style='color:red;text-decoration:line-through'><span style="color:white">{{item.name}}</span></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="svgContainer">
+      <object id="svg1" data="assets/SVG/worldMap.svg" type="image/svg+xml"></object>
+      </div>
+      <input id="inputBox" ng-model="country" ng-change="onInputChange(country)" type="text"/>
+      
+    </div>
+    <div class="col-md-2">
+
+    <h1>{{countriesEntered}} / {{numberOfCountries}}</h1>
+      
+    </div>
+  </div>
+
+</div>
